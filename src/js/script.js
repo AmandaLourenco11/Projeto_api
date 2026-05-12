@@ -25,7 +25,7 @@ configurarCamera();
 // função para ler o texto da imagem
 botaoScanear.onclick = async()=>{
     botaoScanear.disable=true;
-    resultado.innerText="Fazendo a leiura...aguarde";
+    resultado.innerText="Fazendo a leitura...aguarde";
 
     //chama a estrututra do canvas
     const context = canvas.getContext("2d");
@@ -35,7 +35,7 @@ botaoScanear.onclick = async()=>{
     canvas.height = videoElemento.videoHeight;
 
     //reset de qualquer tranformação para garantir que a foto não fique invertida
-    context.setTrasform(1, 0, 1, 0, 0);
+    context.setTransform(1, 0, 1 ,0 ,0);
 
     //Aplica o filtro de contraste e escala conza no canvas antes de tirar a foto(ajuda a evitar aleatórias)
     context.filter = 'contrast(1.2) grayscale(1)';
